@@ -30,16 +30,8 @@
 </template>
 
 <script>
-import { UiCollapsible } from 'keen-ui'
-// import 'vue'
-// import 'keen-ui/src/bootstrap'
-// import UiCollapsible from 'keen-ui/lib/UiCollapsible'
-
 export default {
-  props: ['dependencies'],
-  components: {
-    UiCollapsible
-  }
+  props: ['dependencies']
 }
 </script>
 

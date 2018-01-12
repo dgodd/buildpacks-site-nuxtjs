@@ -1,9 +1,12 @@
 module.exports = {
   plugins: [
-    '~plugins/filters.js',
+    { src: '~plugins/filters.js', ssr: true },
     { src: '~plugins/modules.js', ssr: false }
   ],
-  css: ['~node_modules/tachyons/css/tachyons.min.css'],
+  css: [
+    '~node_modules/tachyons/css/tachyons.min.css',
+    '~node_modules/keen-ui/dist/keen-ui.min.css'
+  ],
   head: {
     title: 'Cloudfoundry Buildpacks',
     meta: [
@@ -17,7 +20,7 @@ module.exports = {
   },
   loading: { color: '#3B8070' },
   build: {
-    vendor: [ "axios", "moment", "keen-ui", "vue-select" ],
+    vendor: [ "axios", "moment" ],
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
