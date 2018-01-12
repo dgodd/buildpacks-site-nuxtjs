@@ -1,7 +1,8 @@
 module.exports = {
   plugins: ['~plugins/filters.js'],
+  css: ['~node_modules/tachyons/css/tachyons.min.css'],
   head: {
-    title: 'buildpacks-site',
+    title: 'Cloudfoundry Buildpacks',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

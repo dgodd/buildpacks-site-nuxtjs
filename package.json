@@ -16,7 +16,8 @@
     "axios": "^0.17.1",
     "moment": "^2.20.1",
     "nuxt": "^1.0.0",
-    "tachyons": "^4.9.1"
+    "tachyons": "^4.9.1",
+    "vue-select": "^2.4.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

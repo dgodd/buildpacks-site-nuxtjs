@@ -1,52 +1,70 @@
 <template>
-  <div>
-    <nuxt/>
+  <div id="app" class="min-vh-100" :class="pageClass">
+    <SiteHeader></SiteHeader>
+    <nuxt />
   </div>
 </template>
 
+<script>
+import SiteHeader from '@/components/SiteHeader'
+
+export default {
+  name: 'app',
+  components: {
+    SiteHeader
+  },
+  computed: {
+    pageClass: function () {
+      // FIXME
+      // return this.$route.meta.pageClass
+      return 'bg-near-white'
+    }
+  }
+}
+</script>
+
 <style>
-html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
+@import url(//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url(//fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto+Mono|Roboto:400,500);
+
+body, html {
+  height: 100%;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
 }
 
-*, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
+.condensed {
+  font-family: 'Roboto Condensed';
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+.monospace {
+  font-family: 'Roboto Mono';
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+hr {
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+.cf-blue {
+  color: #0c9ed5;
 }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.bg-cf-blue {
+  background-color: #0c9ed5;
+}
+
+.drop-shadow {
+  box-shadow: 0 2px 4px rgba(50,50,93,.1);
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .2s
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0
 }
 </style>
