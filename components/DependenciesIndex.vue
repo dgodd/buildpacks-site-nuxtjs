@@ -26,13 +26,11 @@
 
 <script>
 import Semver from 'semver'
-// import vSelect from 'vue-select'
 import DependencyBuildpacks from '@/components/DependencyBuildpacks'
 
 export default {
   props: ['buildpacks', 'primaryDeps'],
   components: {
-    // vSelect,
     DependencyBuildpacks
   },
   data () {
