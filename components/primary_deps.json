@@ -1,0 +1,17 @@
+[
+  "dotnet",
+  "dotnet-framework",
+  "go",
+  "httpd",
+  "hwc",
+  "jruby",
+  "mono",
+  "nginx",
+  "node",
+  "nodejs",
+  "openjdk1.8-latest",
+  "php",
+  "python",
+  "python-ucs2",
+  "ruby"
+]

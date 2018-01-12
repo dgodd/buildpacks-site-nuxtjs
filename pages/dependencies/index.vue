@@ -1,22 +1,23 @@
 <template>
   <Index>
-    <BuildpackIndex :buildpacks="buildpacks" />
+    <DependenciesIndex :buildpacks="buildpacks" :primaryDeps="primaryDeps" />
   </Index>
 </template>
 
 <script>
 import Index from '@/components/Index'
-import BuildpackIndex from '@/components/BuildpackIndex'
+import DependenciesIndex from '@/components/DependenciesIndex'
+import primaryDeps from '@/components/primary_deps'
 import axios from 'axios'
 
 export default {
   components: {
     Index,
-    BuildpackIndex
+    DependenciesIndex
   },
   async asyncData ({ params }) {
     let { data } = await axios.get('https://buildpacks-site.s3.amazonaws.com/buildpacks.json')
-    return { buildpacks: data }
+    return { buildpacks: data, primaryDeps }
   }
 }
 </script>
